@@ -42,15 +42,15 @@ class ViewController: UIViewController {
         view.addSubview(segmentedControl1)
         
         /// example - 02
-        let selectedImages = [#imageLiteral(resourceName: "p1"), #imageLiteral(resourceName: "p2"), #imageLiteral(resourceName: "p3"), #imageLiteral(resourceName: "p4"), #imageLiteral(resourceName: "p5"), #imageLiteral(resourceName: "p6"), #imageLiteral(resourceName: "p7"), #imageLiteral(resourceName: "p8")]
-        let images = [#imageLiteral(resourceName: "sp1"), #imageLiteral(resourceName: "sp2"), #imageLiteral(resourceName: "sp3"), #imageLiteral(resourceName: "sp4"), #imageLiteral(resourceName: "sp5"), #imageLiteral(resourceName: "sp6"), #imageLiteral(resourceName: "sp7"), #imageLiteral(resourceName: "sp8")]
+        let selectedImages = [#imageLiteral(resourceName: "p1"), #imageLiteral(resourceName: "p2"), #imageLiteral(resourceName: "p3"), #imageLiteral(resourceName: "p4")]
+        let images = [#imageLiteral(resourceName: "sp1"), #imageLiteral(resourceName: "sp2"), #imageLiteral(resourceName: "sp3"), #imageLiteral(resourceName: "sp4")]
         let segmentedControl2 = ZSegmentedControl(frame: CGRect(x: 0, y: 50, width: width, height: 40))
         segmentedControl2.selectedIndex = 2
         segmentedControl2.textFont = UIFont.systemFont(ofSize: 17)
-        segmentedControl2.backgroundColor = UIColor.cyan
-        segmentedControl2.setCover(color: .orange)
+        segmentedControl2.backgroundColor = UIColor.white
+        segmentedControl2.setCover(color: .gray)
         segmentedControl2.setImages(images, selectedImages: selectedImages, fixedWidth: 80)
-        segmentedControl2.setSilder(backgroundColor: .purple, position: .topWidthHeight(4), widthStyle: .adaptiveSpace(0))
+//        segmentedControl2.setSilder(backgroundColor: .gray, position: .topWidthHeight(4), widthStyle: .adaptiveSpace(0))
         view.addSubview(segmentedControl2)
         
         /// example - 03
