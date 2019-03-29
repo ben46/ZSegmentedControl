@@ -287,22 +287,22 @@ extension ZSegmentedControl {
                 case .normalWithSpace(let space):
                     if text == nil || image == nil { break }
                     let distance = space/2
-                    button.imageEdgeInsets = UIEdgeInsetsMake(0, -distance, 0, distance)
-                    button.titleEdgeInsets = UIEdgeInsetsMake(0, distance, 0, -distance)
+                    button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -distance, bottom: 0, right: distance)
+                    button.titleEdgeInsets = UIEdgeInsets(top: 0, left: distance, bottom: 0, right: -distance)
                 case .imageTopWithSpace(let space):
                     if text == nil || image == nil { break }
                     let distance = space/2
                     let titleWidth = text?.size(withAttributes: [.font: textFont]).width ?? 0
                     let titleHeight = text?.size(withAttributes: [.font: textFont]).height ?? 0
-                    button.imageEdgeInsets = UIEdgeInsetsMake(-titleHeight-distance, 0, 0, -titleWidth)
-                    button.titleEdgeInsets = UIEdgeInsetsMake(0, -image!.size.width, -image!.size.height-distance, 0)
+                    button.imageEdgeInsets = UIEdgeInsets(top: -titleHeight-distance, left: 0, bottom: 0, right: -titleWidth)
+                    button.titleEdgeInsets = UIEdgeInsets(top: 0, left: -image!.size.width, bottom: -image!.size.height-distance, right: 0)
                 case .imageBottomWithSpace(let space):
                     if text == nil || image == nil { break }
                     let distance = space/2
                     let titleWidth = text?.size(withAttributes: [.font: textFont]).width ?? 0
                     let titleHeight = text?.size(withAttributes: [.font: textFont]).height ?? 0
-                    button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, -titleHeight-distance, -titleWidth)
-                    button.titleEdgeInsets = UIEdgeInsetsMake(-image!.size.height-distance, -image!.size.width, 0, 0)
+                    button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: -titleHeight-distance, right: -titleWidth)
+                    button.titleEdgeInsets = UIEdgeInsets(top: -image!.size.height-distance, left: -image!.size.width, bottom: 0, right: 0)
                 }
             }
             contentSizeWidth += width
