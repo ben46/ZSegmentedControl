@@ -250,12 +250,12 @@ extension ZSegmentedControl {
     fileprivate func setupItems(fixedWidth: CGFloat, leading: CGFloat? = nil) {
         itemsArray.forEach { $0.removeFromSuperview() }
         itemsArray.removeAll()
-        var contentSizeWidth: CGFloat = (self.bounds.size.width - CGFloat(totalItemsCount) * fixedWidth)/2
+        var contentSizeWidth: CGFloat = 0
         for i in 0..<totalItemsCount {
             var width = fixedWidth
             if let leading = leading {
                 let text = titleSources[i] as NSString
-                width = text.size(withAttributes: [.font: textFont]).width + leading * 2
+                width = text.size(withAttributes: [.font: textFont]).width + leading*2
             }
             let x = contentSizeWidth
             let height = frame.size.height
